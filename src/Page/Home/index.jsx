@@ -15,13 +15,17 @@ const Home = () => {
     <Grid container pt={12}>
       <Grid item lg={6} xs={11} sx={{ m: 'auto' }}>
         <Stack
-          component="section"
+          component="article"
           sx={{ display: 'flex', flexDirection: 'column', gap: 4, p: 5 }}
         >
           <Course />
           <Box
             component="section"
-            sx={{ display: 'flex', flexDirection: 'row', gap: 4 }}
+            sx={{
+              display: 'flex',
+              flexDirection: { lg: 'row', xs: 'column' },
+              gap: 4,
+            }}
           >
             <Button variant="contained" color="success" size="large">
               javascript
